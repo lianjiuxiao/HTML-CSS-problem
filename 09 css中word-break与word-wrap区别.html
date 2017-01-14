@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>wbba与wwbw</title>
+	<style>
+		p{
+			width: 300px;
+		    padding: 5px;
+		    background-color: #f0f3f9;
+		    font-size: 14px;
+		}
+		.word-break{
+			word-break:break-all;
+		}
+		.word-wrap{
+			word-break:break-word;
+		}
+		/* 
+			区别：
+			word-break:break-all正如其名字，所有的都换行。毫不留情，一点空隙都不放过。而word-wrap:break-word则带有怜悯之心，如果这一行文字有可以换行的点，如空格，或CJK(Chinese/Japanese/Korean)(中文/日文/韩文)之类的，则就不打英文单词或字符的主意了，让这些换行点换行，至于对不对齐，好不好看，则不关心，因此，很容易出现一片一片牛皮癣一样的空白的情况
+		 */
+		/* 
+
+			顺便扯一下word-spacing与white-space
+			word-spacing: 是指单词之间的间距，而white-space:是字符是否换行显示的;
+		 */
+	</style>
+</head>
+<body>
+	<strong>word-break:break-all</strong>
+	<p class="word-break">你追我，如果你追到我，我就把你嘿嘿嘿，嘿嘿嘿就是打牌啦……的拼音是nizhuiwo, ruguonizhuidaowo, wojiubanniheiheihei, heiheiheijiushidapaila....标点去掉就是：nizhuiworuguonizhuidaowowojiubanniheiheiheiheiheiheijiushidapaila....</p>
+	
+	<strong>word-wrap: break-word;</strong>
+	<p class="word-wrap">你追我，如果你追到我，我就把你嘿嘿嘿……的拼音是nizhuiwo, ruguonizhuidaowo, wojiubanniheiheihei, heiheiheijiushidapaila....标点去掉就是：nizhuiworuguonizhuidaowowojiubanniheiheiheiheiheiheijiushidapaila....</p>
+</body>
+</html>

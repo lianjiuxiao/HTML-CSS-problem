@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>适应不同屏幕的几种布局方案</title>
+	<style>
+	/* 第一种方案 */
+		body{
+
+			font-size: 24px;
+		}
+		.left{
+
+			width: 30%;
+			height: 100px;
+			line-height: 100px;
+			text-align: center;
+			background-color: skyblue;
+			float: left;
+		}
+		.center{
+
+			width: 40%;
+			height: 100px;
+			line-height: 100px;
+			text-align: center;
+			background-color: yellowgreen;
+			float: left;
+		}
+		.right{
+			width: 30%;
+			height: 100px;
+			line-height: 100px;
+			text-align: center;
+			background-color: hotpink;
+			float: left;
+		}
+
+		/* 第二种方案 */
+
+
+
+	</style>
+</head>
+<body>
+	<!-- 第一种方案:流式布局 -->
+	<div class="left">left</div>
+	<div class="center">center</div>
+	<div class="right">right</div>
+
+	<!-- 第二种方案：响应式布局 -->
+	<!-- 详情见14 媒体查询 -->
+
+
+
+	流式布局与响应式布局的区别：
+	1.流式布局在PC上使用更好，而响应式可以适用各种终端
+	2.流式布局针对性强，开发效率高，而响应式针对性较差，开发效率低
+	3.流式布局代码简洁，加载速度快，而响应式代码复杂，加载速度慢
+
+
+</body>
+</html>

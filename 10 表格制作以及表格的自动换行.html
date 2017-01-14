@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>表格制作以及表格的自动换行</title>
+	<style>
+		table{
+			margin-top: 10px;
+		}
+		table td{
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<table width="200" height="200" cellspacing="0" border="1" cellpadding="2" bgcolor="hotpink"> 
+		<tr>
+			<th>1</th>
+			<th>2</th>
+			<th>3</th>
+		</tr>
+		<tr>
+			<td>A</td>
+			<td>B</td>
+			<td>C</td>
+		</tr>
+	</table>
+
+	<table width="200" height="200" cellspacing="0" border="1" cellpadding="2" bgcolor="hotpink">
+		<thead>
+			<tr>
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td rowspan="3">A</td>
+				<td>B</td>
+				<td>C</td>
+			</tr>
+			<tr>
+				<!-- <td>A</td> -->
+				<td colspan="2">B</td>
+				<!-- <td>C</td> -->
+			</tr>
+			<tr>
+				<!-- <td>A</td> -->
+				<td>B</td>
+				<td>C</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<table cellspacing="0" border="1" cellpadding="2" bgcolor="hotpink" style="word-break:break-all; word-wrap:break-all;">
+		<tr>
+			<th>A</th>
+			<th colspan="2">B</th>
+			<!-- <th>C</th> -->
+		</tr>
+		<tr>
+			<th>伫倚危楼风细细，望极春愁，黯黯生天际。草色烟光残照里，无言谁会凭阑意？
+拟把疏狂图一醉，对酒当歌，强乐还无味。衣带渐宽终不悔，为伊消得人憔悴。</th>
+			<th>望处雨收云断，凭栏悄悄，目送秋光。晚景萧疏，堪动宋玉悲凉。水风轻、蘋花渐老；月露冷、梧叶飘黄。遣情伤，故人何在？烟水茫茫。</th>
+			<th>难忘，文期酒会，几孤风月。屡变星霜。海阔山遥，未知何处是潇湘？念双燕、难凭音信；指暮天、空识归航。黯相望，断鸿声里，立尽斜阳。
+</th>
+		</tr>
+	</table>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>不定宽高的垂直居中</title>
+	<!-- 第一种方法 -->
+	<!-- <style>
+		.father{
+			width: 1000px;
+			height:800px;
+			display: table-cell;
+			text-align: center;
+			vertical-align: middle;
+			border: 1px solid #000;
+		}
+		.son{
+			width: 80%;
+			height: 60%;
+			background-color: pink;
+			display: inline-block;
+			vertical-align: middle;
+		}
+	</style> -->
+	<!-- 第二种方法 -->
+
+	<style>
+		.box{
+			width: 50%;
+			height: 50%;
+			margin: auto;
+			position: absolute;
+			left: 0;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			background-color: hotpink;
+		}
+	</style>
+</head>
+<body>
+	<!-- 第一种方法 -->
+	<!-- <div class="father">
+		<div class="son"></div>
+	</div> -->
+	<!-- 第二种方法 -->
+	<div class="box">
+		
+	</div>
+</body>
+</html>

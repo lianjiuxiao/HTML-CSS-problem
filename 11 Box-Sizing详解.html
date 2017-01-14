@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Box-Sizing</title>
+	<style>
+
+	/* 
+
+		定义:指定盒模型大小的计算方式;
+	 */
+
+	/* 
+		content-box(从内容固定盒子大小)：默认。宽度和高度值仅适用于元素的内容。填充和边框添加到框的外部。
+		padding-box：宽度和高度值适用于元素的内容及其填充。边框被添加到框的外部。
+					 目前，只有Firefox支持的padding-box价值。
+		border-box(从边框固定盒子大小)：宽度和高度值适用于内容，填充和边框。
+	 */
+	
+	/* 
+		说明：
+
+		比方说，你设置一个元素width: 100px; padding: 20px; border: 5px solid black;。默认情况下，生成的框宽为150像素。这是因为默认盒大小的模型是content-box，其中只有一个元素的声明宽度适用于它的内容，将元素的外包装箱的填充和边框。这有效地增加了元素占用了多少空间。
+		如果更改box-sizing到padding-box，填充的元素的盒子里推。然后，该框将是110px宽，内部有20px的填充和外部的10px边框。如果你想放的填充和盒内的边界，就可以使用border-box。然后框将是100px宽 - 10px的边框和20px的填充都被推入元素的框内。
+
+		
+	 */
+	
+
+	/* 
+		实例
+	 */
+		.content-box{
+			box-sizing: content-box;
+		}
+		.padding-box{
+			box-izing: padding-box;
+		}
+		/* 基本用于盒子内减 */
+		.border-box{
+			box-sizing: border-box;
+		}
+		.demo{
+			width: 400px;
+			margin: 0 0 0.5rem 0;
+			background-color: cyan;
+			padding: 1rem;
+		}
+		h4{
+			font-family: monospace;
+		}
+		div[class*="box"]{
+			width: 200px;
+			padding: 20px;
+			background-color: hotpink;
+			border: 10px solid #ccc;
+			background-clip: content-box;
+		}
+	</style>
+</head>
+<body>
+	<section class="demo">
+		<h4>box-sizing: content-box;</h4>
+		<div class="content-box">
+			Content
+		</div>
+	</section>
+		<section class="demo">
+		<h4>box-sizing: padding-box;</h4>
+		<div class="padding-box">
+			Content
+		</div>
+	</section>
+		<section class="demo">
+		<h4>box-sizing: border-box;</h4>
+		<div class="border-box">
+			Content
+		</div>
+	</section>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>表单自动验证</title>
+</head>
+<body>
+
+	
+	<form action="#" method="">
+		<input type="text" name="text" required pattern='^\w.*$'>
+		<input type="submit" value="提交" >
+	</form>
+	
+	<!-- 1.required属性
+	html5中新增的required属性可以应用在大多数输入元素上(除了隐藏元素,图片元素按钮上时,如果元素内容为空白,则不容许提交,同时在浏览器中显示信息提示文字,提示用户这个元素中必须输入内容) -->
+
+	 <form action="#" method="post">
+            请输入指定内容:<input pattern="[0-9][A-Z]{3}" name="part" placeholder="输入:一个数字三个大写字母">
+            <input type="submit" value="提交">
+    </form>
+
+	<!-- 2.pattern属性
+	之前提到的新增的input元素，比如email，number，URL等，要求输入内容符合一定的格式，对input元素使用pattern属性，并且将属性值设置为某个格式的正则表达式，在提交时会检查其内容是否符合给定格式。当输入的内容不符合给定格式时，则不允许提交，同时在浏览器中显示信息提示文字，提交输入的内容必须符合给定格式，代码如上，要求输入内容为一个数字与3个大写字母; -->
+
+	<form action="#" method="post">
+            请输入数值:<input type="number" name="point" min="0" max="100" />
+            <input type="submit" value="提交">
+    </form>
+	<!-- 3.min属性与max属性
+	min与max这两个属性是日期类型或数值类型的input元素的专用属性，他们限制了在input元素中输入的数值与日期的范围 -->
+
+	<form action="#" method="get">
+      <input type="number" name="point" step="5" />
+      <input type="submit" />
+    </form>
+
+	<!-- 4.step属性
+	step属性控制input元素中的值增加过减少时的步骤。例如当你想让用户输入的值在0与100之间，但必须是5的倍数时，你可以指定step为5，代码如上： -->
+
+</body>
+</html>

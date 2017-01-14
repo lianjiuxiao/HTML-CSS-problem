@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>容器属性</title>
+	<style>
+
+		/* 采用Flex布局的元素，称为Flex容器;
+		在容器上的属性：
+
+		1.flex-direction:
+		定义：决定主轴方向(项目排列的方向)
+		属性值：row(主轴为水平方向) | row-reverse | column(主轴为垂直方向) | column-reverse;
+
+		2.flex-wrap:
+		定义：如果项目在一条轴线上，如何换行
+		属性值：nowrap(默认值，不换行) | wrap(换行 第一行在上) | wrap-reverse(换行 第一行在下);
+
+		3.flex-flow:
+		定义： 该属性是flex-direction与flex-wrap属性的简写形式，默认值为： row nowrap;
+
+		4.justify-content: 
+		定义：定义了项目在主轴上的对齐方式
+		属性值：flex-star(左对齐) | flex-end(右对齐) | center(居中) | spac-between(两端对齐) | space-around(每个项目两侧的间隔相等;
+
+		5.align-items:
+		定义：定义项目在交叉轴上如何对齐
+		属性值：flex-start(交叉轴起点对齐) | flex-end(交叉轴终点对齐) | center(交叉轴中点对齐) | baseline(项目第一行文字基线对齐) | stretch(默认值);
+
+		6.algin-content:
+		定义: 定义了多根轴线的对齐方式，如果是一根轴线，该方式不起作用
+		属性值： flex-start(与交叉轴的起点对齐) | flex-end(与交叉轴的终点对齐) | center(与交叉轴的中点对齐) | spac-between(与交叉轴两端对齐，轴线之间的间隔平均分布) | space-around(每根轴线两侧的间隔都相等。所以，轴线之间的间隔比轴线与边框的间隔大一倍) | stretch(默认值，轴线占满整个交叉轴);
+		 */
+
+
+		.box{
+			width: 500px;
+			height: 500px;
+			background-color: hotpink;
+			display: flex;
+			/* flex-direction: column; */
+			/* flex-flow: row nowrap; */
+			justify-content: flex-end;
+		}
+		.son{
+			/* flex: 1; */
+			width: 100px;
+			height: 100%;
+			background-color: cyan;
+			margin-left: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="son">A</div>
+		<div class="son">B</div>
+		<div class="son">C</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>css hack</title>
+	<style>
+		#box{ 
+			width: 200px;
+			height: 200px;
+			background-color: hotpink !important;
+			background-color: green;
+
+			border: 1px solid #000;
+			color: #fff;
+		 }
+
+
+
+
+
+		 /* 
+			现在有这样一段需求：使用css定义p  标签，要求在IE6下为黑色，IE7下为红色，而其他浏览器为绿色
+		  */
+		 
+		 p{
+		 	color: green;
+		 	*color: blue;
+		 	_color:black;
+		 }
+	</style>
+</head>
+<body>
+	<div id="box">
+		!important只兼容到IE6+
+	</div>
+
+	<p>
+		只在IE下生效
+		<!--[if IE]>
+		这段文字只在IE浏览器显示
+		<![endif]-->
+		只在IE6下生效
+		<!--[if IE 6]>
+		这段文字只在IE6浏览器显示
+		<![endif]-->
+		只在IE6以上版本生效
+		<!--[if gte IE 6]>
+		这段文字只在IE6以上(包括)版本IE浏览器显示
+		<![endif]-->
+		非IE浏览器生效
+		<!--[if !IE]>
+		这段文字只在非IE浏览器显示
+		<![endif]-->
+	</p>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>响应式布局</title>
+
+	<!-- 在CSS3中 Media Query中，通过查询不同的screen宽度来指定每个区域内的布局 -->
+	<!-- 超小屏幕：768px以下
+	小屏幕：768px ~ 992px
+	中等屏幕：992px ~ 1200px
+	大屏幕： 1200px以上 -->
+
+	
+	<!-- 第一种方法; -->
+	<!-- <link rel="stylesheet" href="skyblue.css" media="(min-width:1280px)">
+	<link rel="stylesheet" href="yellowgreen.css" media="(min-width:768px) and (max-width:1279px)">
+	<link rel="stylesheet" href="hotpink.css" media="(min-width:0px) and (max-width:767px)"> -->
+
+
+	<!-- 第二种方法; -->
+	<link rel="stylesheet" href="skyblue.css" media="(min-width:0px)">
+	<link rel="stylesheet" href="yellowgreen.css" media="(min-width:767px)">
+	<link rel="stylesheet" href="hotpink.css" media="(min-width:1280px)">
+</head>
+<body>
+<!-- 	<div class="box">
+		
+
+	</div> -->
+
+	<!-- 上述写法有一些弊端 
+	（1） css太多了 ，不方便管理和修改， 请求太多，影响性能
+	（2） 最重要的是这种写法会让每一个css都完全独立，而实际上我们的响应式网站基本在响应时都不会将所有的css都推翻掉，而是保留大部分的css，只是修改局部的一些css
+	针对上述问题，推荐使用迭代法去实现
+	技巧：先写最大范围的，然后用小范围去覆盖掉大范围里面的一些样式
+	-->
+
+
+	<div class="box">
+		
+
+	</div>
+</body>
+</html>
