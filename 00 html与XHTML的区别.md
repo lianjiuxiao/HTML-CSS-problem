@@ -1,21 +1,21 @@
 
 # 不同点
-1.XHTML 元素必须被正确地嵌套。
+1. XHTML 元素必须被正确地嵌套。
 错误：<p><span>this is example.</p></span>
 正确：<p><span>this is example.</span></p>
 
-2.XHTML 元素必须被关闭。
+2. XHTML 元素必须被关闭。
 错误：<p>this is example.
 正确：<p>this is example.</p>
 
-3.标签名必须用小写字母。
+3. 标签名必须用小写字母。
 错误：<P>this is example.<P>
 正确：<p>this is example.</p>
 3.1空标签也必须被关闭
 错误：<br>
 正确：<br/>
 
-4.XHTML 文档必须拥有根元素。
+4. XHTML 文档必须拥有根元素。
 所有的 XHTML 元素必须被嵌套于 <html> 根元素中。
 
 
